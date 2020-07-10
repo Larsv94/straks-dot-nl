@@ -44,8 +44,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       inject: "body",
-      filename: path.resolve(__dirname, "../../Features/Shared/_Layout.cshtml"),
-      template: "../Features/Shared/_Layout_Template.cshtml",
+      filename: path.resolve(
+        __dirname,
+        "../../Features/Shared/Partials/_Layout.cshtml"
+      ),
+      template: "../Features/Shared/Partials/_Layout_Template.cshtml",
     }),
   ],
   stats: { colors: true },

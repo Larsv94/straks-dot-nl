@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace straks_nl.Web.Controllers
+namespace straks_nl.Web.Features.Pages
 {
     public class HomeController : Controller
     {

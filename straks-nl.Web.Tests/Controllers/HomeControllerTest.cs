@@ -5,7 +5,7 @@ using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using straks_nl.Web;
-using straks_nl.Web.Controllers;
+using straks_nl.Web.Features.Pages.Test;
 
 namespace straks_nl.Web.Tests.Controllers
 {

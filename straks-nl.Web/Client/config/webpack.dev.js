@@ -62,7 +62,7 @@ module.exports = merge(CommonConfig, {
     new WatchExternalFilesPlugin({
       files: [
         path.resolve(__dirname, "../../**/*.cshtml"),
-        `!${path.resolve(__dirname, "../../Views/Shared/_Layout.cshtml")}`,
+        `!${path.resolve(__dirname, "../../Features/Shared/_Layout.cshtml")}`,
       ],
       verbose: true,
     }),

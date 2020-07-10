@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using straks_nl.Web.Models;
 
-namespace straks_nl.Web.Controllers
+namespace straks_nl.Web.Features.Users.Account
 {
     [Authorize]
     public class AccountController : Controller

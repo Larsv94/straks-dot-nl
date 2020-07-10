@@ -163,13 +163,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\ViewEngines\FeatureFolderNameViewEngine.cs" />
+    <Compile Include="App_Start\ViewEngines\FeatureViewEngine.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Features\Users\Account\AccountController.cs" />
+    <Compile Include="Features\Pages\HomeController.cs" />
+    <Compile Include="Features\Users\Manage\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,38 +192,39 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout_Template.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Features\Shared\Error.cshtml" />
+    <Content Include="Features\Shared\Partials\_Layout_Template.cshtml" />
+    <Content Include="Features\Pages\About.cshtml" />
+    <Content Include="Features\Pages\Contact.cshtml" />
+    <Content Include="Features\Pages\Index.cshtml" />
+    <Content Include="Features\Users\Account\Partials\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Features\Users\Account\Views\ConfirmEmail.cshtml" />
+    <Content Include="Features\Users\Account\Views\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Features\Users\Account\Views\ExternalLoginFailure.cshtml" />
+    <Content Include="Features\Users\Account\Views\ForgotPassword.cshtml" />
+    <Content Include="Features\Users\Account\Views\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Features\Users\Account\Views\Login.cshtml" />
+    <Content Include="Features\Users\Account\Views\Register.cshtml" />
+    <Content Include="Features\Users\Account\Views\ResetPassword.cshtml" />
+    <Content Include="Features\Users\Account\Views\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Features\Users\Account\Views\SendCode.cshtml" />
+    <Content Include="Features\Users\Account\Views\VerifyCode.cshtml" />
+    <Content Include="Features\Users\Manage\Views\AddPhoneNumber.cshtml" />
+    <Content Include="Features\Users\Manage\Views\ChangePassword.cshtml" />
+    <Content Include="Features\Users\Manage\Views\Index.cshtml" />
+    <Content Include="Features\Users\Manage\Views\ManageLogins.cshtml" />
+    <Content Include="Features\Users\Manage\Views\SetPassword.cshtml" />
+    <Content Include="Features\Users\Manage\Views\VerifyPhoneNumber.cshtml" />
+    <Content Include="Features\Shared\Lockout.cshtml" />
+    <Content Include="Features\Shared\Partials\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Features\Pages\Test\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Features\Web.config" />
+    <Content Include="Features\_ViewStart.cshtml" />
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>

@@ -6,9 +6,10 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using straks_nl.Web.Features.Users.Account;
 using straks_nl.Web.Models;
 
-namespace straks_nl.Web.Controllers
+namespace straks_nl.Web.Features.Users.Manage
 {
     [Authorize]
     public class ManageController : Controller

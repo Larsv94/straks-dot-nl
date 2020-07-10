@@ -1,3 +1,4 @@
+using straks_nl.Web.App_Start.ViewEngines;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,10 @@ namespace straks_nl.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new FeatureFolderNameViewEngine());
+            ViewEngines.Engines.Add(new FeatureViewEngine());
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using straks_nl.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,6 +10,10 @@ namespace straks_nl.Web.Features.Pages
 {
     public class HomeController : Controller
     {
+        public HomeController(ApplicationDbContext db)
+        {
+           var temp =  db.Articles.ToList();
+        }
         public ActionResult Index()
         {
             return View();
